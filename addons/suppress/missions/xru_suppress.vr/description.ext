@@ -1,0 +1,6 @@
+author = "xrufix";
+briefingName = "xru Suppress";
+overviewText = "Try the suppression effects in 'xru Suppress'.";
+
+allowFunctionsRecompile = 1;
+enableDebugConsole = 2;

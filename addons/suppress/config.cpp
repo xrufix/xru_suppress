@@ -25,3 +25,4 @@ class CfgMods {
 };
 
 #include "CfgEventHandlers.hpp"
+#include "CfgMissions.hpp"
