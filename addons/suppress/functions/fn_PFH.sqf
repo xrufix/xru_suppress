@@ -3,14 +3,7 @@
 private _timeFactor = (time - GVAR(lastReduce));
 
 GVAR(bullets) = GVAR(bullets) select {
-	_x params ["_bullet","_hit","_radius"];
-	private _distance = (getPosASL _bullet) distance (eyePos ace_player);
-	if (!alive _bullet) then {false} else {
-		if (_distance < _radius) then {
-			[_hit,_distance,_radius] call FUNC(effect);
-		};
-		true
-	};
+	[_x, _timeFactor] call FUNC(selectBullets);
 };
 
 GVAR(suppression) = 0 max (GVAR(suppression) - _timeFactor * (((time - GVAR(lastShotAt)) / 20) min 1) ^ 2);

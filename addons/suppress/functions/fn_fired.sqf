@@ -23,8 +23,8 @@ if (count _intersections != 0) then {
 
 private _radius = 10 min (_hit / 2);
 
-GVAR(bullets) pushBack [_projectile,_hit,_radius];
+GVAR(bullets) pushBack [_projectile, _hit, _radius, getPosASL _projectile];
 
 #ifdef DEBUG_MODE_FULL
-    systemChat str [_projectile,_hit,_radius];
+    systemChat str [_projectile, _hit, _radius];
 #endif

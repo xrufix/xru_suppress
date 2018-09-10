@@ -1,18 +1,22 @@
 #include "script_component.hpp"
 
 params [["_hit",10,[1]],["_distance",5,[1]],["_radius",10,[1]]];
-private _impact = (10 min (_hit / 2)) * (1 - _distance / _radius);
+private _impact = (10 min (_hit / 3)) * (1 - _distance / _radius);
 GVAR(suppression) = 0.25 max (GVAR(suppression) + _impact / 100) min 1;
 
 #ifdef DEBUG_MODE_FULL
     systemChat format ["hit: %1 – dist: %2 – rad: %3 | impact: %4 – suppression: %5", _hit, _distance, _radius, _impact, GVAR(suppression)];
 #endif
 
-addCamShake [_impact * GVAR(camShake) / 2, 0.3, 30];
+if (GVAR(camShake) != 0) then {
+    addCamShake [_impact * GVAR(camShake) / 2, 0.3, 30];
+};
 
-GVAR(blinkingBlur) ppEffectAdjust [_impact * GVAR(blinking) / 2];
-GVAR(blinkingBlur) ppEffectCommit 0;
-GVAR(blinkingBlur) ppEffectAdjust [0];
-GVAR(blinkingBlur) ppEffectCommit (0.2 + _impact / 10);
+if (GVAR(blinking) != 0) then {
+    GVAR(blinkingBlur) ppEffectAdjust [_impact * GVAR(blinking) / 2];
+    GVAR(blinkingBlur) ppEffectCommit 0;
+    GVAR(blinkingBlur) ppEffectAdjust [0];
+    GVAR(blinkingBlur) ppEffectCommit (0.2 + _impact / 10);
+};
 
 GVAR(lastShotAt) = time;
