@@ -6,7 +6,7 @@ class CfgPatches {
         author = "xrufix";
         url = "http://www.gruppe-w.de";
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"cba_main"};
+        requiredAddons[] = {"cba_main", "ace_common"};
         VERSION_CONFIG;
         ammo[] = {};
         magazines[] = {};
