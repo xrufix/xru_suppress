@@ -1,3 +1,5 @@
+#include "..\..\script_component.hpp"
+
 player createDiaryRecord ["Diary", [
     "How to use",
     "- Use the Notebook to let the AI fire at you.<br/>"+
@@ -8,3 +10,7 @@ player createDiaryRecord ["Diary", [
 ]];
 
 (allCurators select 0) addCuratorEditableObjects [allMissionObjects "All", true];
+
+player addAction ["Test suppression [LMB]", {
+    [10, 2, 5] call FUNC(effect);
+}, nil, 1.5, true, true, "defaultAction"];

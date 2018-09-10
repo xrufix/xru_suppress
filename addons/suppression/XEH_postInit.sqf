@@ -21,7 +21,3 @@ GVAR(blinkingBlur) ppEffectCommit 0;
 
 // Add PFH for effects
 [{call FUNC(PFH)}] call CBA_fnc_addPerFrameHandler;
-
-#ifdef DEBUG_MODE_FULL
-    player addAction["Effect", {[10, 2, 5] call FUNC(effect)}, nil, 1.5, true, true, "defaultAction"];
-#endif
