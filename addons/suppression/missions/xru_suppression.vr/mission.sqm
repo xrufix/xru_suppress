@@ -8,202 +8,17 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=12;
+		nextID=15;
 	};
 	class Camera
 	{
-		pos[]={476.46277,8.0517368,4593.0015};
-		dir[]={-0.95566684,-0.29478529,0.0077338605};
-		up[]={-0.29483354,0.9554984,0.0023870354};
-		aside[]={0.0080991182,-4.321987e-007,1.000073};
+		pos[]={498.22659,7.6547799,4590.7139};
+		dir[]={-0.89815503,-0.36593649,0.2442539};
+		up[]={-0.35315472,0.93056875,0.096041605};
+		aside[]={0.26245132,9.6581061e-008,0.96504426};
 	};
 };
 binarizationWanted=0;
-addons[]=
-{
-	"A3_Characters_F",
-	"A3_Weapons_F_Rifles_MX",
-	"A3_Weapons_F_Mark_Rifles_MX",
-	"ace_overheating",
-	"ace_realisticnames",
-	"ace_scopes",
-	"ace_smallarms",
-	"ace_ai",
-	"ace_ballistics",
-	"xru_tracer",
-	"A3_Weapons_F_Acc",
-	"ace_laserpointer",
-	"A3_Weapons_F_Mark_Acc",
-	"A3_Weapons_F",
-	"A3_Weapons_F_Pistols_P07",
-	"acre_main",
-	"ace_nightvision",
-	"ace_attach",
-	"ace_chemlights",
-	"A3_Weapons_F_Items",
-	"ace_medical",
-	"A3_Modules_F",
-	"A3_Structures_F_Items_Electronics",
-	"A3_Structures_F_Heli_Furniture",
-	"A3_Modules_F_Curator_Curator",
-	"A3_Soft_F_Exp_LSV_02",
-	"A3_Soft_F_Exp_MRAP_02",
-	"A3_Structures_F_Mil_Fortification"
-};
-class AddonsMetaData
-{
-	class List
-	{
-		items=21;
-		class Item0
-		{
-			className="A3_Characters_F";
-			name="Arma 3 Alpha - Characters and Clothing";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item1
-		{
-			className="A3_Weapons_F";
-			name="Arma 3 Alpha - Weapons and Accessories";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item2
-		{
-			className="A3_Weapons_F_Mark";
-			name="Arma 3 Marksmen - Weapons and Accessories";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item3
-		{
-			className="ace_overheating";
-			name="ACE3 - Overheating";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item4
-		{
-			className="ace_scopes";
-			name="ACE3 - Scopes";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item5
-		{
-			className="ace_smallarms";
-			name="ACE3 - Small Arms";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item6
-		{
-			className="ace_ai";
-			name="ACE3 - AI";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item7
-		{
-			className="ace_ballistics";
-			name="ACE3 - Ballistics";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item8
-		{
-			className="xru_tracer";
-			name="Colorful Tracers";
-			author="[W] rufix";
-			url="http://www.gruppe-w.de";
-		};
-		class Item9
-		{
-			className="ace_laserpointer";
-			name="ACE3 - Laser Pointer";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item10
-		{
-			className="acre_main";
-			name="ACRE2 - Main";
-			author="ACRE2Team";
-			url="https://github.com/IDI-Systems/acre2";
-		};
-		class Item11
-		{
-			className="ace_nightvision";
-			name="ACE3 - Night Vision";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item12
-		{
-			className="ace_attach";
-			name="ACE3 - Attach";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item13
-		{
-			className="ace_chemlights";
-			name="ace_chemlights";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item14
-		{
-			className="ace_medical";
-			name="ACE3 - Medical";
-			author="ACE-Team";
-			url="http://ace3mod.com/";
-		};
-		class Item15
-		{
-			className="A3_Modules_F";
-			name="Arma 3 Alpha - Scripted Modules";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item16
-		{
-			className="A3_Structures_F";
-			name="Arma 3 - Buildings and Structures";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item17
-		{
-			className="A3_Structures_F_Heli";
-			name="Arma 3 Helicopters - Buildings and Structures";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item18
-		{
-			className="A3_Modules_F_Curator";
-			name="Arma 3 Zeus Update - Scripted Modules";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item19
-		{
-			className="A3_Soft_F_Exp";
-			name="Arma 3 Apex - Unarmored Land Vehicles";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item20
-		{
-			className="A3_Structures_F_Mil";
-			name="Arma 3 - Military Buildings and Structures";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-	};
-};
 randomSeed=6000445;
 class ScenarioData
 {
@@ -259,7 +74,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=2;
+									items=1;
 									class Item0
 									{
 										class data
@@ -272,20 +87,6 @@ class CustomAttributes
 												};
 											};
 											value="xru_suppression_enabled";
-										};
-									};
-									class Item1
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"STRING"
-												};
-											};
-											value="xru_suppression_blinking";
 										};
 									};
 								};
@@ -304,7 +105,7 @@ class CustomAttributes
 								};
 								class value
 								{
-									items=2;
+									items=1;
 									class Item0
 									{
 										class data
@@ -345,51 +146,6 @@ class CustomAttributes
 															};
 														};
 														value=1;
-													};
-												};
-											};
-										};
-									};
-									class Item1
-									{
-										class data
-										{
-											class type
-											{
-												type[]=
-												{
-													"ARRAY"
-												};
-											};
-											class value
-											{
-												items=2;
-												class Item0
-												{
-													class data
-													{
-														class type
-														{
-															type[]=
-															{
-																"SCALAR"
-															};
-														};
-														value=1.0189066;
-													};
-												};
-												class Item1
-												{
-													class data
-													{
-														class type
-														{
-															type[]=
-															{
-																"SCALAR"
-															};
-														};
-														value=0;
 													};
 												};
 											};
@@ -455,17 +211,17 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={495.46524,5.0014391,4591.4482};
+						position[]={495.465,5.0014391,4591.4478};
 						angles[]={0,4.6756325,0};
 					};
 					side="West";
-					flags=7;
+					flags=6;
 					class Attributes
 					{
 						isPlayer=1;
 					};
-					id=1;
-					type="B_soldier_AR_F";
+					id=13;
+					type="B_Soldier_F";
 					class CustomAttributes
 					{
 						class Attribute0
@@ -558,7 +314,7 @@ class Mission
 						{
 							class primaryWeapon
 							{
-								name="arifle_MX_SW_F";
+								name="arifle_MX_SW_pointer_F";
 								flashlight="acc_pointer_IR";
 								underBarrel="bipod_01_F_snd";
 								class primaryMuzzleMag
@@ -873,7 +629,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={464.28308,6.7298193,4595.187};
+				position[]={464.62143,6.7298193,4597.0386};
 				angles[]={0,1.732703,0};
 			};
 			side="Empty";
@@ -889,22 +645,6 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={466.20248,7.7927246,4591.332};
-				angles[]={0,1.5701076,0};
-			};
-			side="Empty";
-			flags=4;
-			class Attributes
-			{
-			};
-			id=10;
-			type="O_T_MRAP_02_hmg_ghex_F";
-		};
-		class Item8
-		{
-			dataType="Object";
-			class PositionInfo
-			{
 				position[]={492.9155,6.21,4586.4575};
 				angles[]={0,4.6499395,0};
 			};
@@ -915,6 +655,22 @@ class Mission
 			};
 			id=11;
 			type="Land_HBarrier_Big_F";
+		};
+		class Item8
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={464.86856,6.6602917,4590.8589};
+				angles[]={0,1.4789047,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=14;
+			type="B_HMG_01_high_F";
 		};
 	};
 };
