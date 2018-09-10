@@ -22,7 +22,9 @@ if (GVAR(suppression) > 0) then {
 		GVAR(tunnelVisionCC) ppEffectAdjust [1, 1, 0, [0,0,0,1], [1,1,1,1], [1,1,1,0], [_outer , _outer, 0, 0, 0, _inner , 0.5]];
 		GVAR(tunnelVisionCC) ppEffectCommit 0;
 	};
-	[ace_player, "xru_suppress", GVAR(weaponSway) * 15 * (GVAR(suppression) ^ 1)] call ace_common_fnc_setAimCoef;
+	if (GVAR(weaponSway) > 0) then {
+		[ace_player, "xru_suppress", GVAR(weaponSway) * 15 * (GVAR(suppression) ^ 1)] call ace_common_fnc_setAimCoef;
+	};
 } else {
 	[ace_player, "xru_suppress", 0, false] call ace_common_fnc_setAimCoef;
 };
