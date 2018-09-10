@@ -1,5 +1,5 @@
-#define COMPONENT suppress
-#define COMPONENT_BEAUTIFIED Suppress
+#define COMPONENT suppression
+#define COMPONENT_BEAUTIFIED Suppression Effects
 #include "script_mod.hpp"
 
 // #define DEBUG_MODE_FULL

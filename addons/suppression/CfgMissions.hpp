@@ -1,9 +1,9 @@
 class CfgMissions {
     class Missions {
-        class xru_suppress {
-            directory = "x\xru\addons\suppress\missions\xru_suppress.VR";
+        class ADDON {
+            directory = QUOTE(x\MAINPREFIX\PREFIX\addons\COMPONENT\missions\ADDON.vr);
             author = "xrufix";
-            displayName = "xru Suppress";
+            displayName = COMPONENT_NAME;
             overviewText = "Try the suppression effects in 'xru Suppress'.";
         };
     };

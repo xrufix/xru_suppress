@@ -1,6 +1,7 @@
+#include "..\..\script_component.hpp"
+
 author = "xrufix";
-briefingName = "xru Suppress";
+briefingName = COMPONENT_NAME;
 overviewText = "Try the suppression effects in 'xru Suppress'.";
 
-allowFunctionsRecompile = 1;
 enableDebugConsole = 2;

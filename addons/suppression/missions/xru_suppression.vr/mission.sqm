@@ -271,7 +271,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="xru_suppress_enabled";
+											value="xru_suppression_enabled";
 										};
 									};
 									class Item1
@@ -285,7 +285,7 @@ class CustomAttributes
 													"STRING"
 												};
 											};
-											value="xru_suppress_blinking";
+											value="xru_suppression_blinking";
 										};
 									};
 								};

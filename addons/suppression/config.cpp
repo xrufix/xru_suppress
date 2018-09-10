@@ -2,7 +2,7 @@
 
 class CfgPatches {
     class ADDON {
-        name = COMPONENT_BEAUTIFIED;
+        name = COMPONENT_NAME;
         author = "xrufix";
         url = "http://www.gruppe-w.de";
         requiredVersion = REQUIRED_VERSION;
@@ -17,7 +17,7 @@ class CfgPatches {
 
 class CfgMods {
     class ADDON {
-        name = "xru Suppression";
+        name = COMPONENT_NAME;
         actionName = "Website";
         action = "http://www.gruppe-w.de";
         description = "Gruppe W e.V.";

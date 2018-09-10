@@ -19,15 +19,15 @@ if (_suppression > 0) then {
         GVAR(tunnelVisionCC) ppEffectCommit 0;
     };
     if (GVAR(weaponSway) > 0) then {
-        [ace_player, "xru_suppress", GVAR(weaponSway) * 15 * (_suppression ^ 1)] call ace_common_fnc_setAimCoef;
+        [ace_player, QUOTE(ADDON), GVAR(weaponSway) * 15 * (_suppression ^ 1)] call ace_common_fnc_setAimCoef;
     };
 } else {
-    [ace_player, "xru_suppress", 0, false] call ace_common_fnc_setAimCoef;
+    [ace_player, QUOTE(ADDON), 0, false] call ace_common_fnc_setAimCoef;
 };
 
 #ifdef DEBUG_MODE_FULL
     hintSilent format [
-        "xru_suppress: \n"
+        QUOTE(ADDON) + ": \n"
         + "Suppression: %1 \n"
         + "Redcution Factor: %2 \n"
         + "Last Shot at ace_player: %3s ago. \n"

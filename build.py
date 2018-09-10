@@ -5,7 +5,7 @@ import sys
 
 gitDir = os.path.dirname(os.path.realpath(__file__))
 addonsDir = gitDir + "\\addons"
-mainDir = addonsDir + "\\suppress"
+mainDir = addonsDir + "\\suppression"
 
 print("gitDir:    " + gitDir)
 print("addonsDir: " + addonsDir)
@@ -46,7 +46,7 @@ def pack(version):
     if not os.path.exists(destDir):
         os.makedirs(destDir)
     source = mainDir
-    target = gitDir + "\\releases\\" + strVersion + "\\xru_suppress.pbo"
+    target = gitDir + "\\releases\\" + strVersion + "\\xru_suppression.pbo"
     subprocess.run(["armake_w64.exe","build","-f","-i","P:",source,target], stdout = subprocess.PIPE)
 
 version = updateVersion(getVersion())
