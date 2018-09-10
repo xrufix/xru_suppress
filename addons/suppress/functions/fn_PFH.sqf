@@ -22,12 +22,12 @@ if (GVAR(suppression) > 0) then {
 		GVAR(suppressionCC) ppEffectAdjust [1, 1, 0, [0,0,0,1], [1,1,1,1], [1,1,1,0], [_outer , _outer, 0, 0, 0, _inner , 0.5]];
 		GVAR(suppressionCC) ppEffectCommit 0;
 	};
-	[ace_player, "xru_suppress", 15 * (GVAR(suppression) ^ 1)] call ace_common_fnc_setAimCoef;
+	[ace_player, "xru_suppress", GVAR(weaponSway) * 15 * (GVAR(suppression) ^ 1)] call ace_common_fnc_setAimCoef;
 } else {
 	[ace_player, "xru_suppress", 0, false] call ace_common_fnc_setAimCoef;
 };
 
-#ifdef DEBUG_MODE
+#ifdef DEBUG_MODE_FULL
 	hintSilent format [
 		"xru_suppress: \n" 
 		+ "Suppression: %1 \n" 
@@ -36,7 +36,7 @@ if (GVAR(suppression) > 0) then {
 		+ "Weapon Sway: %4 \n"
 		+ "Tracked Bullets: \n %5",
 		GVAR(suppression),
-		_timeFactor * GVAR(sinkRate),
+		_timeFactor,
 		0.1 * round ((time - GVAR(lastShotAt)) * 10),
 		getCustomAimCoef ace_player,
 		GVAR(bullets)

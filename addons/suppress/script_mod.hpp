@@ -1,5 +1,4 @@
-#define MAINPREFIX xru
-#define PREFIX suppress
+#define PREFIX xru
 
 #include "script_version.hpp"
 
@@ -9,4 +8,4 @@
 #define REQUIRED_VERSION 1.84
 #define REQUIRED_CBA_VERSION {3,8,0}
 
-#define COMPONENT_NAME QUOTE(xru suppress - COMPONENT_BEAUTIFIED)
+#define COMPONENT_NAME QUOTE(xru - COMPONENT_BEAUTIFIED)

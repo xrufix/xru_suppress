@@ -1,13 +1,10 @@
 #include "script_component.hpp"
 
-ADDON = false;
 if (!hasInterface) exitWith {};
+if (!GVAR(enabled)) exitWith {};
 
 // Add Fired Eventhandler to all classes.
-["All", "Fired", {call FUNC(firedEH)}, true] call CBA_fnc_addClassEventHandler;
-
-// Add PFH for effects
-[{call FUNC(PFH)}] call CBA_fnc_addPerFrameHandler;
+["All", "Fired", {call FUNC(fired)}, true] call CBA_fnc_addClassEventHandler;
 
 // Initialize PPE
 GVAR(suppressionCC) = ppEffectCreate ["colorCorrections", 1452];
@@ -22,8 +19,9 @@ GVAR(impactBlur) ppEffectEnable true;
 GVAR(impactBlur) ppEffectForceInNVG true;
 GVAR(impactBlur) ppEffectCommit 0;
 
-#ifdef DEBUG_MODE
-	player addAction["Effect",{[10, 2, 5] call xru_suppress_fnc_effect},nil,1.5,true,true,"defaultAction"];
-#endif
+// Add PFH for effects
+[{call FUNC(PFH)}] call CBA_fnc_addPerFrameHandler;
 
-ADDON = true;
+#ifdef DEBUG_MODE_FULL
+	player addAction["Effect", {[10, 2, 5] call FUNC(effect)}, nil, 1.5, true, true, "defaultAction"];
+#endif
