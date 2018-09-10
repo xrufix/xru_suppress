@@ -19,8 +19,8 @@ if (GVAR(suppression) > 0) then {
 	if (GVAR(Tunnelvision) > 0) then {
     	private _inner = (0.7 - GVAR(suppression) / 2) / GVAR(Tunnelvision);
     	private _outer = (1 - GVAR(suppression) / 5) / GVAR(Tunnelvision);
-		GVAR(suppressionCC) ppEffectAdjust [1, 1, 0, [0,0,0,1], [1,1,1,1], [1,1,1,0], [_outer , _outer, 0, 0, 0, _inner , 0.5]];
-		GVAR(suppressionCC) ppEffectCommit 0;
+		GVAR(tunnelVisionCC) ppEffectAdjust [1, 1, 0, [0,0,0,1], [1,1,1,1], [1,1,1,0], [_outer , _outer, 0, 0, 0, _inner , 0.5]];
+		GVAR(tunnelVisionCC) ppEffectCommit 0;
 	};
 	[ace_player, "xru_suppress", GVAR(weaponSway) * 15 * (GVAR(suppression) ^ 1)] call ace_common_fnc_setAimCoef;
 } else {

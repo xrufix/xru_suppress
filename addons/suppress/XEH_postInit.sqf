@@ -7,17 +7,17 @@ if (!GVAR(enabled)) exitWith {};
 ["All", "Fired", {call FUNC(fired)}, true] call CBA_fnc_addClassEventHandler;
 
 // Initialize PPE
-GVAR(suppressionCC) = ppEffectCreate ["colorCorrections", 1452];
-GVAR(suppressionCC) ppEffectAdjust [1, 1, 0, [0,0,0,0], [1,1,1,1], [1,1,1,0], [1,1,0,0,0,1,0]];
-GVAR(suppressionCC) ppEffectEnable true;
-GVAR(suppressionCC) ppEffectForceInNVG true;
-GVAR(suppressionCC) ppEffectCommit 0;
+GVAR(tunnelVisionCC) = ppEffectCreate ["colorCorrections", 1452];
+GVAR(tunnelVisionCC) ppEffectAdjust [1, 1, 0, [0,0,0,0], [1,1,1,1], [1,1,1,0], [1,1,0,0,0,1,0]];
+GVAR(tunnelVisionCC) ppEffectEnable true;
+GVAR(tunnelVisionCC) ppEffectForceInNVG true;
+GVAR(tunnelVisionCC) ppEffectCommit 0;
 
-GVAR(impactBlur) = ppEffectCreate ["DynamicBlur", 776];
-GVAR(impactBlur) ppEffectAdjust [0];
-GVAR(impactBlur) ppEffectEnable true;
-GVAR(impactBlur) ppEffectForceInNVG true;
-GVAR(impactBlur) ppEffectCommit 0;
+GVAR(blinkingBlur) = ppEffectCreate ["DynamicBlur", 776];
+GVAR(blinkingBlur) ppEffectAdjust [0];
+GVAR(blinkingBlur) ppEffectEnable true;
+GVAR(blinkingBlur) ppEffectForceInNVG true;
+GVAR(blinkingBlur) ppEffectCommit 0;
 
 // Add PFH for effects
 [{call FUNC(PFH)}] call CBA_fnc_addPerFrameHandler;

@@ -10,9 +10,9 @@ GVAR(suppression) = 0.25 max (GVAR(suppression) + _impact / 100) min 1;
 
 addCamShake [_impact * GVAR(camShake) / 2, 0.3, 30];
 
-GVAR(impactBlur) ppEffectAdjust [_impact * GVAR(blinking) / 2];
-GVAR(impactBlur) ppEffectCommit 0;
-GVAR(impactBlur) ppEffectAdjust [0];
-GVAR(impactBlur) ppEffectCommit (0.2 + _impact / 10);
+GVAR(blinkingBlur) ppEffectAdjust [_impact * GVAR(blinking) / 2];
+GVAR(blinkingBlur) ppEffectCommit 0;
+GVAR(blinkingBlur) ppEffectAdjust [0];
+GVAR(blinkingBlur) ppEffectCommit (0.2 + _impact / 10);
 
 GVAR(lastShotAt) = time;
