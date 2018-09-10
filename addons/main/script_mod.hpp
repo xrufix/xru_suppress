@@ -1,0 +1,12 @@
+#define MAINPREFIX xru
+#define PREFIX suppress
+
+#include "script_version.hpp"
+
+#define VERSION MAJOR.MINOR.PATCHLVL.BUILD
+#define VERSION_AR MAJOR,MINOR,PATCHLVL,BUILD
+
+#define REQUIRED_VERSION 1.84
+#define REQUIRED_CBA_VERSION {3,8,0}
+
+#define COMPONENT_NAME QUOTE(xru suppress - COMPONENT_BEAUTIFIED)
