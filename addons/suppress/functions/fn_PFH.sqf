@@ -1,22 +1,25 @@
 #include "script_component.hpp"
 
 private _timeFactor = (time - GVAR(lastReduce));
+private _lastShotAt = ace_player getVariable [QGVAR(lastShotAt), 0];
 
 GVAR(bullets) = GVAR(bullets) select {
 	[_x, _timeFactor] call FUNC(selectBullets);
 };
 
-GVAR(suppression) = 0 max (GVAR(suppression) - _timeFactor * (((time - GVAR(lastShotAt)) / 20) min 1) ^ 2);
+private _suppression = ace_player getVariable [QGVAR(suppression), 0];
+_suppression = 0 max (_suppression - _timeFactor * (((time - _lastShotAt) / 20) min 1) ^ 2);
+ace_player setVariable [QGVAR(suppression), _suppression];
 
-if (GVAR(suppression) > 0) then {
+if (_suppression > 0) then {
 	if (GVAR(Tunnelvision) > 0) then {
-    	private _inner = (0.7 - GVAR(suppression) / 2) / GVAR(Tunnelvision);
-    	private _outer = (1 - GVAR(suppression) / 5) / GVAR(Tunnelvision);
+    	private _inner = (0.7 - _suppression / 2) / GVAR(Tunnelvision);
+    	private _outer = (1 - _suppression / 5) / GVAR(Tunnelvision);
 		GVAR(tunnelVisionCC) ppEffectAdjust [1, 1, 0, [0,0,0,1], [1,1,1,1], [1,1,1,0], [_outer , _outer, 0, 0, 0, _inner , 0.5]];
 		GVAR(tunnelVisionCC) ppEffectCommit 0;
 	};
 	if (GVAR(weaponSway) > 0) then {
-		[ace_player, "xru_suppress", GVAR(weaponSway) * 15 * (GVAR(suppression) ^ 1)] call ace_common_fnc_setAimCoef;
+		[ace_player, "xru_suppress", GVAR(weaponSway) * 15 * (_suppression ^ 1)] call ace_common_fnc_setAimCoef;
 	};
 } else {
 	[ace_player, "xru_suppress", 0, false] call ace_common_fnc_setAimCoef;
@@ -30,9 +33,9 @@ if (GVAR(suppression) > 0) then {
 		+ "Last Shot at ace_player: %3s ago. \n"
 		+ "Weapon Sway: %4 \n"
 		+ "Tracked Bullets: \n %5",
-		GVAR(suppression),
+		_suppression,
 		_timeFactor,
-		0.1 * round ((time - GVAR(lastShotAt)) * 10),
+		0.1 * round ((time - _lastShotAt) * 10),
 		getCustomAimCoef ace_player,
 		GVAR(bullets)
 	];

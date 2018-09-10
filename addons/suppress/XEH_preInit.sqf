@@ -6,8 +6,6 @@ ADDON = false;
 
 // GVARs
 GVAR(bullets) = [];
-GVAR(lastShotAt) = 0;
-GVAR(suppression) = 0;
 GVAR(lastReduce) = 0;
 
 // CBA Settings
