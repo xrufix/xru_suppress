@@ -15,7 +15,6 @@ if (_suppression > 0) then {
     if (GVAR(Tunnelvision) > 0) then {
         private _inner = 1 - ( (GVAR(tunnelVision) / 2) ^ ( 2/3 ) )* (_suppression ^ (1/3) );
         private _outer = 1 - (_suppression / 3 * GVAR(tunnelVision));
-        systemChat str [_inner, _outer];
         GVAR(tunnelVisionCC) ppEffectAdjust [1, 1, 0, [0,0,0,1], [1,1,1,1], [1,1,1,0], [_outer, _outer, 0, 0, 0, _inner, 0.5]];
         GVAR(tunnelVisionCC) ppEffectCommit 0;
     };
