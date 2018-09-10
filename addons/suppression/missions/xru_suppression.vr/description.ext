@@ -2,6 +2,6 @@
 
 author = "xrufix";
 briefingName = COMPONENT_NAME;
-overviewText = "Try the suppression effects in 'xru Suppress'.";
+overviewText = CSTRING(mission_overviewText);
 
 enableDebugConsole = 2;

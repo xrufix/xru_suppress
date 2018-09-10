@@ -1,16 +1,16 @@
 #include "..\..\script_component.hpp"
 
 player createDiaryRecord ["Diary", [
-    "How to use",
-    "- Use the Notebook to let the AI fire at you.<br/>"+
-    "- Press 'LMB' to simulate a 6.5mm Bullet passing you at a distance of 2 meters.<br/>"+
-    "- You can use Zeus to move the soldier inside one of the vehicles (or spawn custom vehicles to do so).<br/>"+
-    "- Change the settings in the CBA Settings Menu to test different results.<br/>"+
-    "- Use the debug console to your liking."
+    (localize LSTRING(mission_diary_title)),
+    (localize LSTRING(mission_diary_l1))+"<br/>"+
+    (localize LSTRING(mission_diary_l2))+"<br/>"+
+    (localize LSTRING(mission_diary_l3))+"<br/>"+
+    (localize LSTRING(mission_diary_l4))+"<br/>"+
+    (localize LSTRING(mission_diary_l5))
 ]];
 
 (allCurators select 0) addCuratorEditableObjects [allMissionObjects "All", true];
 
-player addAction ["Test suppression [LMB]", {
+player addAction [localize LSTRING(mission_action), {
     [10, 2, 5] call FUNC(effect);
 }, nil, 1.5, true, true, "defaultAction"];

@@ -4,7 +4,7 @@ class CfgMissions {
             directory = QUOTE(MAINPREFIX\PREFIX\addons\COMPONENT\missions\ADDON.vr);
             author = "xrufix";
             displayName = COMPONENT_NAME;
-            overviewText = "Try the suppression effects in 'xru Suppress'.";
+            overviewText = CSTRING(mission_overviewText);
         };
     };
 };

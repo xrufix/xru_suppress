@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="xru_suppression">
+    <Package name="main">
+        <Container name="main">
+            <Key ID="STR_xru_suppression_settings_enabled">
+                <English>Enable Effects</English>
+                <German>Effekte aktivieren</German>
+            </Key>
+            <Key ID="STR_xru_suppression_settings_enabled_tooltip">
+                <English>Enables suppression effects.</English>
+                <German>Aktiviert die Unterdrückungseffekte.</German>
+            </Key>
+            <Key ID="STR_xru_suppression_settings_blinking">
+                <English>Blinking</English>
+                <German>Blinzeln</German>
+            </Key>
+            <Key ID="STR_xru_suppression_settings_blinking_tooltip">
+                <English>Amount of blur when a bullet passes nearby. Set to 0 to disable the effect.</English>
+                <German>Unschärfe, wenn eine Kugel vorbei fliegt. Stelle 0 ein, um den Effekt zu deaktivieren.</German>
+            </Key>
+            <Key ID="STR_xru_suppression_settings_camshake">
+                <English>Cam Shake</English>
+                <German>Verwackeln</German>
+            </Key>
+            <Key ID="STR_xru_suppression_settings_camshake_tooltip">
+                <English>Amount of cam shake when a bullet passes nearby. Set to 0 to disable the effect.</English>
+                <German>Wackeln des Bildes, wenn eine Kugel vorbei fliegt. Stelle 0 ein, um den Effekt zu deaktivieren.</German>
+            </Key>
+            <Key ID="STR_xru_suppression_settings_tunnelVision">
+                <English>Tunnel Vision</English>
+                <German>Tunnelblick</German>
+            </Key>
+            <Key ID="STR_xru_suppression_settings_tunnelVision_tooltip">
+                <English>Narrows the field of view relative to suppression. Set to 0 to disable.</English>
+                <German>Schränkt abhängig vom Ausmaß der Unterdrückung das Sichtfeld ein. Stelle 0 ein, um den Effekt zu deaktivieren.</German>
+            </Key>
+            <Key ID="STR_xru_suppression_settings_weaponSway">
+                <English>Weapon Sway</English>
+                <German>Schwanken der Waffe</German>
+            </Key>
+            <Key ID="STR_xru_suppression_settings_weaponSway_tooltip">
+                <English>Increases weapon sway realtive to suppression. Set to 0 to disable.</English>
+                <German>Erhöht das Schwanken der Waffe abhängig vom Ausmaß der Unterdrückung. Stelle 0 ein, um den Effekt zu deaktivieren.</German>
+            </Key>
+            <Key ID="STR_xru_suppression_mission_overviewText">
+                <English>Try the suppression effects in 'xru Suppression'!</English>
+                <German>Probiere die Unterdrückungseffekte in 'xru Suppression' aus!</German>
+            </Key>
+            <Key ID="STR_xru_suppression_mission_diary_title">
+                <English>How to use</English>
+                <German>Benutzungshinweise</German>
+            </Key>
+            <Key ID="STR_xru_suppression_mission_diary_l1">
+                <English>- Use the Notebook to let the AI suppress you.</English>
+                <German>- Benutze das Notebook, um die KI dich unterdrücken zu lassen.</German>
+            </Key>
+            <Key ID="STR_xru_suppression_mission_diary_l2">
+                <English>- Press 'LMB' to simulate a 6.5mm Bullet passing you at a distance of 2 meters.</English>
+                <German>- Drücke die linke Maustaste, um eine 6.5mm Kugel zu simulieren, die in einer Entfernung von 2 Metern an dir vorbei geschossen wird.</German>
+            </Key>
+            <Key ID="STR_xru_suppression_mission_diary_l3">
+                <English>- You can use Zeus to move the soldier inside one of the vehicles (or spawn custom vehicles to do so).</English>
+                <German>- Du kannst Zeus benutzen, um den Soldaten in eines der Fahrzeuge zu setzen (oder eigene Fahrzeuge zu spawnen).</German>
+            </Key>
+            <Key ID="STR_xru_suppression_mission_diary_l4">
+                <English>- Change the settings in the CBA Settings Menu to test different results.</English>
+                <German>- Ändere die Einstellungen im CBA-Einstellungsmenü, um unterschiedliche Ergebnisse zu testen.</German>
+            </Key>
+            <Key ID="STR_xru_suppression_mission_diary_l5">
+                <English>- Use the debug console to your liking.</English>
+                <German>- Du kannst die Debugkonsole nach deinen Wünschen nutzen.</German>
+            </Key>
+            <Key ID="STR_xru_suppression_mission_action">
+                <English>Test suppression [LMB].</English>
+                <German>Unterdrückungseffekt testen [LMT]</German>
+            </Key>
+        </Container>
+    </Package>
+</Project>
