@@ -1,6 +1,6 @@
 #include "script_component.hpp"
 
-params ["_unit","_weapon","_muzzle","_mode","_ammo","_magazine","_projectile","_gunner"];
+params ["_unit", "_weapon", "", "", "_ammo", "", "_projectile", ""];
 
 if (_unit == ace_player) exitWith {};
 if (_unit == vehicle ace_player) exitWith {};

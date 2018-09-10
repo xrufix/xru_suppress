@@ -5,10 +5,10 @@ private _impact = (10 min (_hit / 2)) * (1 - _distance / _radius);
 GVAR(suppression) = 0.25 max (GVAR(suppression) + _impact / 100) min 1;
 
 #ifdef DEBUG_MODE_FULL
-    systemChat format ["hit: %1 – dist: %2 – rad: %3 | impact: %4 – suppression: %5",_hit,_distance,_radius,_impact,GVAR(suppression)];
+    systemChat format ["hit: %1 – dist: %2 – rad: %3 | impact: %4 – suppression: %5", _hit, _distance, _radius, _impact, GVAR(suppression)];
 #endif
 
-addCamShake [_impact * GVAR(Camshake) / 2, 0.3, 30];
+addCamShake [_impact * GVAR(camShake) / 2, 0.3, 30];
 
 GVAR(impactBlur) ppEffectAdjust [_impact * GVAR(blinking) / 2];
 GVAR(impactBlur) ppEffectCommit 0;
