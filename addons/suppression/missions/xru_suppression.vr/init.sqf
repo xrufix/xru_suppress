@@ -14,3 +14,5 @@ player createDiaryRecord ["Diary", [
 player addAction [localize LSTRING(mission_action), {
     [10, 2, 5] call FUNC(effect);
 }, nil, 1.5, true, true, "defaultAction"];
+
+enableSaving [false, false];

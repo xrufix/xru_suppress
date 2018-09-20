@@ -1,5 +1,11 @@
 #include "script_component.hpp"
 
+if (GVAR(isSpectator) && {!GVAR(enableSpectator)}) exitWith {
+        GVAR(PFH) call CBA_fnc_removePerFrameHandler;
+        GVAR(PFH) = -1;
+    };
+};
+
 private _timeFactor = (time - GVAR(lastReduce));
 private _lastShotAt = ace_player getVariable [QGVAR(lastShotAt), 0];
 

@@ -11,14 +11,13 @@ print("gitDir:    " + gitDir)
 print("addonsDir: " + addonsDir)
 print("mainDir:   " + mainDir)
 
-def getVersion():  
+def getVersion():
     print ("Set version number:")
     major = input("Major: ")
     minor = input("Minor: ")
     patch = input("Patch: ")
     print ("Version: {}.{}.{}".format(major,minor,patch))
     return(major, minor, patch)
-
 
 def updateVersion(version):
     global tempDir
@@ -35,9 +34,8 @@ def updateVersion(version):
     with open(mainDir + "\\script_version.hpp", "w") as file:
         for line in lines:
             file.write(line)
-    
-    return(major,minor,patch,build)
 
+    return(major,minor,patch,build)
 
 def pack(version):
     major, minor, patch, build = version
