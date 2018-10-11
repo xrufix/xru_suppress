@@ -5,6 +5,7 @@ ADDON = false;
 #include "XEH_PREP.hpp"
 
 // GVARs
+GVAR(hitCache) = call CBA_fnc_createNamespace;
 GVAR(bullets) = [];
 GVAR(lastReduce) = 0;
 GVAR(PFH) = -1;

@@ -10,6 +10,14 @@
                 <English>Enables suppression effects.</English>
                 <German>Aktiviert die Unterdrückungseffekte.</German>
             </Key>
+            <Key ID="STR_xru_suppression_settings_enableSpectator">
+                <English>Virtual Spectator</English>
+                <German>Virtuelle Zuschauer</German>
+            </Key>
+            <Key ID="STR_xru_suppression_settings_enableSpectator_tooltip">
+                <English>Enables or disables suppression effects for virtual spectators.</English>
+                <German>Aktiviert oder deaktiviert die Unterdrückungseffekter für virtuelle Zuschauer.</German>
+            </Key>
             <Key ID="STR_xru_suppression_settings_blinking">
                 <English>Blinking</English>
                 <German>Blinzeln</German>
@@ -39,7 +47,7 @@
                 <German>Schwanken der Waffe</German>
             </Key>
             <Key ID="STR_xru_suppression_settings_weaponSway_tooltip">
-                <English>Increases weapon sway realtive to suppression. Set to 0 to disable.</English>
+                <English>Increases weapon sway relative to suppression. Set to 0 to disable.</English>
                 <German>Erhöht das Schwanken der Waffe abhängig vom Ausmaß der Unterdrückung. Stelle 0 ein, um den Effekt zu deaktivieren.</German>
             </Key>
             <Key ID="STR_xru_suppression_mission_overviewText">
