@@ -19,12 +19,11 @@ private _cos = (velocity _projectile) vectorCos (_positionProjectile vectorFromT
 if (_cos < 0.95) exitWith {};
 
 // Get hit value from config or cache
-private _hit = GVAR(hitCache) getVariable [_ammo, -1];
-if (_hit == -1) then {
-    _hit = getNumber (configfile >> "CfgAmmo" >> _ammo >> "hit");
-    GVAR(hitCache) setVariable [_ammo, _hit];
-    TRACE_2("Cache",_ammo,_hit);
+if !([GVAR(hitHash), _ammo] call CBA_fnc_hashHasKey) then {
+    [GVAR(hitHash), _ammo, getNumber (configfile >> "CfgAmmo" >> _ammo >> "hit")] call CBA_fnc_hashSet;
+    TRACE_2("Hashed hit value",_ammo,_hit);
 };
+private _hit = [GVAR(hitHash), _ammo] call CBA_fnc_hashGet;
 
 // Reduce the effect if the player is behind cover
 private _intersections = lineIntersectsSurfaces [_positionPlayer, _positionProjectile, vehicle _unit, vehicle ace_player];
