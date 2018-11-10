@@ -6,7 +6,7 @@ if ((vehicle ace_player != ace_player) && {!isTurnedOut ace_player}) exitWith {}
 
 private _impact = (10 min (_hit / 3)) * (1 - _distance / _radius);
 private _suppression = ace_player getVariable [QGVAR(suppression), 0];
-_suppression = 0.25 max (_suppression + _impact / 100) min 1;
+_suppression = linearConversion [25, 100, _suppression + _impact, 0.25, 1, true];
 ace_player setVariable [QGVAR(suppression), _suppression];
 
 #ifdef DEBUG_MODE_FULL
