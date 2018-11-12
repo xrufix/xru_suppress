@@ -6,7 +6,7 @@ _bulletArgs params ["_bullet", "_hit", "_radius", "_lastPos"];
 if (!alive _bullet) exitWith {false};
 
 private _currPos = getPosASL _bullet;
-if (_currPos == _lastPos) exitWith {true};
+if (_currPos isEqualTo _lastPos) exitWith {true};
 _bulletArgs set [3, _currPos];
 
 if ((_lastPos distance (eyePos ace_player)) > 20) exitWith {true};
